@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@1,300&display=swap');
+nav > div > a{
+  font-family: 'Anton', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+nav a{
+  font-size: 1.2vw;
+}
