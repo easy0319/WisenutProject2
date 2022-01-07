@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form id="signincss" action='/signin' method='POST'>
+	<h1>로그인</h1>
+	<input class="form-control" type="email" name="email" placeholder="이메일"/>
+	<input class="form-control "  type="password" name="pw" autoComplete="on" placeholder="비밀번호"/>
+	<button class="form-control btn-dark" type="submit">로그인</button>
+	<p>아이디가 없으신가요? <a href="/signup">회원가입</a></p>
+</form>
+{% endblock content %}

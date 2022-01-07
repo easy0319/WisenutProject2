@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Raleway:ital,wght@1,300&display=swap');
-nav > div > a{
-  font-family: 'Anton', sans-serif;
-  font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Do+Hyeon&display=swap');
+
+.navbar-brand{
+  font-family: 'Arvo', serif;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 2vw;
 }
-nav a{
-  font-size: 1.2vw;
+.nav-link{
+  font-family: 'Arvo', serif;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 1.5vw;
 }
