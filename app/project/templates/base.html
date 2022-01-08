@@ -1,26 +1,77 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 	<head>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<link rel="stylesheet" href="/static/css/bootstrap.min.css">
-			<link rel="stylesheet" href="/static/css/body.css">
-			<link rel="stylesheet" href="/static/css/header.css">
-			<link rel="stylesheet" href="/static/css/sign.css">
-			<link rel="stylesheet" href="/static/css/content.css">
-			<link rel="stylesheet" href="/static/css/foot.css">
-		</head>
-	<body>
-		<div id="container" class="wrap">
-			{% if session.email %}
-				{% include "nav2.html" %}
-			{% else %}
-				{% include "nav.html" %}
-			{% endif %}
-			<div id="content">
-				{% block content %}{% endblock %}
+		<title>Duck4 WisenutProject2</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="/static/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><a href="{{url_for('userAPI.base')}}"><img src="../static/img/duck4.png" alt=""/></a></span>
+							<h1 id="title">Duck4</h1>
+							<p>인공지능 기반 챗봇</p>
+							<p>SW개발자 양성과정</p>
+						</div>
+
+					<!-- Nav -->
+						{% if session.email %}
+							{% include "nav2.html" %}
+						{% else %}
+							{% include "nav.html" %}
+						{% endif %}
+
+				</div>
+
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://github.com/easy0319/WisenutProject2" class="fab fa-github fa-2x"></a></li>
+						</ul>
+
+				</div>
+
 			</div>
-			{% include "foot.html" %}
-		</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				{% if session.email %}
+					{% include "intro.html" %}
+					{% include "portfolio.html" %}
+					{% include "about.html" %}
+				{% else %}
+					{% include "intro.html" %}
+					{% include "signin.html" %}
+					{% include "signup.html" %}
+				{% endif %}
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>Copyright &copy; Duck4</li>
+					</ul>
+			</div>
+
+		<!-- Scripts -->
+			<script src="/static/js/jquery.min.js"></script>
+			<script src="/static/js/jquery.scrolly.min.js"></script>
+			<script src="/static/js/jquery.scrollex.min.js"></script>
+			<script src="/static/js/browser.min.js"></script>
+			<script src="/static/js/breakpoints.min.js"></script>
+			<script src="/static/js/util.js"></script>
+			<script src="/static/js/main.js"></script>
+
 	</body>
 </html>
