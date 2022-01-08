@@ -1,21 +1,14 @@
-<!-- fixed-top -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container">
-		<a class="navbar-brand" href="/">Duck4</a>	
-		<div class="collapse navbar-collapse" id="navbarResponsive">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active">
-					<a class="nav-link" href="/">홈
-						<span class="sr-only">(current)</span>
-					</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" aria-disabled="true">{{info}}</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/logout">로그아웃</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+<nav id="nav">
+	<ul>
+		<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>	
+		<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+		<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Us</span></a></li>		
+	</ul>
+</nav>
+
+<nav id="nav">
+	<ul class="na">
+		<li><a aria-disabled="true"><span>{{info}}</span></a></li>
+		<li><a href="/logout"><span>Logout</span></a></li>
+	</ul>
 </nav>

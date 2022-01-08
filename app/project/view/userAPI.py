@@ -18,8 +18,8 @@ userAPI = Blueprint('userAPI', __name__, template_folder='/templates')
 def base():
     if request.method == 'GET':
         if 'email' in session:
-            email = session['email'].split('@')
-            return render_template('base.html', info = email[0])
+            email = session['email']
+            return render_template('base.html', info = email)
         else:
             return render_template('base.html')
 
@@ -38,15 +38,15 @@ def signup():
                     return redirect(url_for('userAPI.base'))
                 else:
                     print("이미 중복된 아이디가 존재함")
-                    return redirect(url_for('userAPI.signup'))
+                    return redirect(url_for('userAPI.base'))
             else:
                 print("비밀번호가 다르거나 비어있는 칸이 존재함")
-                return redirect(url_for('userAPI.signup'))
+                return redirect(url_for('userAPI.base'))
     else:   #GET
         if 'email' in session:
             return redirect(url_for('userAPI.base'))
         else:
-            return render_template('signup.html')
+            return render_template('userAPI.base')
 
 @userAPI.route('/signin', methods=['POST', 'GET'])
 def signin():
@@ -61,15 +61,15 @@ def signin():
                     return redirect(url_for('userAPI.base'))
                 else:
                     print("존재하는 아이디가 없거나 비밀번호가 다름")
-                    return redirect(url_for('userAPI.signin'))
+                    return redirect(url_for('userAPI.base'))
             else:
                 print("이메일 혹은 비밀번호가 비어있음")
-                return redirect(url_for('userAPI.signin'))
+                return redirect(url_for('userAPI.base'))
     else:
         if 'email' in session:
             return redirect(url_for('userAPI.base'))
         else:
-            return render_template('signin.html')
+            return render_template('userAPI.base')
 
 @userAPI.route('/logout')
 def logout():
