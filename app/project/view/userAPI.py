@@ -95,3 +95,47 @@ def logout():
         session.pop('email')
         return redirect(url_for('userAPI.base'))
     return redirect(url_for('userAPI.base'))
+
+@userAPI.route('/pandas', methods=['POST', 'GET'])
+def pandas():
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import numpy as np
+    import matplotlib
+    matplotlib.use('Agg')
+    from io import BytesIO
+    import base64
+
+    img = BytesIO()
+    #0-price, 1-year, 2-date
+    art_df = pd.read_csv('static/csv/art.csv')
+
+    #각 년도별 최고 금액
+    maxs = art_df['0'].max()
+    art_df_group = art_df.groupby('1')
+    art_df_group = art_df_group['0'].max()
+    art_df_group = art_df_group.reset_index()
+
+    # 시각화1
+    art_df['2'] = pd.to_datetime(art_df['2'])
+    maxs = art_df["0"].max()
+    plt.scatter(x=art_df['2'],y=art_df['0'])
+    plt.style.use(['tableau-colorblind10'])
+    plt.yticks(np.arange(0,maxs, step=maxs // 10))
+    plt.savefig(img, format='png')
+    plt.close()
+    img.seek(0)
+    plot_url = base64.b64encode(img.getvalue()).decode('utf8')
+
+    img = BytesIO()
+    # 시각화2
+    plt.plot(art_df_group['1'],art_df_group['0'])
+    plt.style.use(['tableau-colorblind10'])
+    plt.yticks(np.arange(0,maxs, step=maxs // 10))
+    plt.savefig(img, format='png')
+    plt.close()
+    img.seek(0)
+    plot_url2 = base64.b64encode(img.getvalue()).decode('utf8')
+
+    return render_template('plot.html', plot_url=plot_url, plot_url2=plot_url2)
