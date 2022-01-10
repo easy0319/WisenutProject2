@@ -218,6 +218,7 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
+		min-height: 650px;
 	}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
@@ -2126,7 +2127,7 @@ input, select, textarea {
 		}
 	
 	.na{
-		padding-top: 10em;
+		padding-top: 8em;
 	}
 
 	#nav ul {
@@ -2748,4 +2749,23 @@ form > i {
 
 .logform {
 	height: 550px;
+}
+
+/* sign up a tag */
+#wrongdata {
+	color: #E27689;
+	font-weight: bold;
+}
+.scrolly {
+	color: #45aba6;
+	border-bottom-color: rgba(255, 255, 255, 0);
+	font-weight: bold;
+}
+
+code{
+	font-family: monospace;
+}
+
+#loginh {
+	padding-top: 100px;
 }

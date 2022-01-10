@@ -29,6 +29,9 @@
 						<i class="fa fa-female fa-2x" aria-hidden="true"></i>
 						
 						<button class="login-btn form-control btn-dark" type="submit">Sign up</button>
+						{% if check_signup == False %}
+							<p id="wrongdata">This E-mail already exists! or Empty!</p>
+						{% endif %}
 					</form>
 				</div>
 			</div>
