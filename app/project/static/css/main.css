@@ -1980,7 +1980,6 @@ input, select, textarea {
 /* Item */
 
 	.item {
-		box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.05);
 		margin-bottom: 40px;
 	}
 
@@ -2225,7 +2224,6 @@ input, select, textarea {
 		.main_contents {
 			margin: 0;
 			overflow: hidden;
-			padding-top: 2em;
 			text-align: left;
 		}
 		.notheader {
@@ -2777,4 +2775,22 @@ code{
 
 #loginh {
 	padding-top: 100px;
+}
+
+q {
+
+  display: inline;
+
+} 
+
+q:before {
+
+  content: open-quote;
+
+}
+
+q:after {
+
+  content: close-quote;
+
 }
