@@ -28,7 +28,7 @@
 
 	// Nav.
 		var $nav_a = $nav.find('a');
-
+		
 		$nav_a
 			.addClass('scrolly')
 			.on('click', function(e) {
@@ -121,9 +121,10 @@
 					visibleClass: 'header-visible'
 				});
 
-	var login
 				// nav 선택 못하게
 				// document.querySelector("#top-link").removeAttribute('href');
 				// document.querySelector("#portfolio-link").removeAttribute('href');
 				// document.querySelector("#about-link").removeAttribute('href');
+
+				
 })(jQuery);
