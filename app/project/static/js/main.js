@@ -50,6 +50,7 @@
 						.addClass('active')
 						.addClass('active-locked');
 
+					return false;
 			})
 			.each(function() {
 
@@ -120,8 +121,9 @@
 					visibleClass: 'header-visible'
 				});
 
+	var login
 				// nav 선택 못하게
-				document.querySelector("#top-link").removeAttribute('href');
-				document.querySelector("#portfolio-link").removeAttribute('href');
-				document.querySelector("#about-link").removeAttribute('href');
+				// document.querySelector("#top-link").removeAttribute('href');
+				// document.querySelector("#portfolio-link").removeAttribute('href');
+				// document.querySelector("#about-link").removeAttribute('href');
 })(jQuery);
