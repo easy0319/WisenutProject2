@@ -12,23 +12,15 @@ def insta():
     font_path = '/System/Library/Fonts/AppleSDGothicNeo.ttc'
     fontprop = font_manager.FontProperties(fname=font_path).get_name()
     rc('font',family = fontprop)
-    insta_df = pd.read_csv('static/csv/insta.csv')
-    insta_df_anal = insta_df.dropna(axis=0)
-    insta_grouped = insta_df_anal.groupby('place').count()
-    insta_grouped = insta_grouped.reset_index()
-    insta_grouped.columns = ['place', 'count']
-    insta_top10 = insta_grouped.sort_values('count', ascending=False).head(10)
-
+    insta_top10 = pd.read_csv('static/csv/insta.csv')
+    
     insta_top10 = insta_top10.sort_values('place')
-    insta_top10['place'][1:2].replace(' ','')
-    insta_top10['place'][1:2].replace('-','\n')
+    
     img = BytesIO()
     for i in insta_top10['place']:
       insta_top10.loc[(insta_top10.place == i),'place'] = i.replace(' ','\n')
     explodes =(0, 0.1, 0, 0, 0, 0, 0, 0, 0, 0)
     plt.figure(facecolor='#ecf1f1')
-    ax = plt.axes()
-    ax.set_facecolor = ('white')
     plt.pie(
         insta_top10['count'],
         startangle=90,

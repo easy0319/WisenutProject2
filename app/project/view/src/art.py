@@ -24,8 +24,6 @@ def art():
     art_df['2'] = pd.to_datetime(art_df['2'])
     maxs = art_df["0"].max()
     plt.figure(facecolor='#ecf1f1')
-    ax = plt.axes()
-    ax.set_facecolor = ('white')
     plt.scatter(art_df['2'],art_df['0'])
     plt.style.use(['tableau-colorblind10'])
     plt.yticks(np.arange(0,maxs, step=maxs // 10))
@@ -37,8 +35,6 @@ def art():
     img = BytesIO()
     # 천경자 시각화2;
     plt.figure(facecolor='#ecf1f1')
-    ax = plt.axes()
-    ax.set_facecolor = ('white')
     plt.plot(art_df_group['1'],art_df_group['0'])
     plt.style.use(['tableau-colorblind10'])
     plt.yticks(np.arange(0,maxs, step=maxs // 10))
