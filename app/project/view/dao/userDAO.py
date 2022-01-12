@@ -1,6 +1,6 @@
 import hashlib #sha256
 import sqlite3 as sql
-from typing import final
+# from typing import final
 
 class User():
   def __init__(self, email, pw=0, birth=0, sex=0):
@@ -65,12 +65,14 @@ class User():
       self.pw = self.pw.hexdigest()
       conn = sql.connect("duck.db")
       cur = conn.cursor()
+
       s = """
           SELECT * FROM users
-          WHERE email=:email and pw=:pw
+            WHERE email=:email and pw=:pw
           """
       cur.execute(s, {"email":self.email, "pw":self.pw})
       data = cur.fetchone()
+
       if data:
         user = User(*data)
         return True

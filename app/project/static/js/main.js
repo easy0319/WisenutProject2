@@ -125,6 +125,4 @@
 				// document.querySelector("#top-link").removeAttribute('href');
 				// document.querySelector("#portfolio-link").removeAttribute('href');
 				// document.querySelector("#about-link").removeAttribute('href');
-
-				
 })(jQuery);

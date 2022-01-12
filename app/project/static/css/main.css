@@ -1982,7 +1982,6 @@ input, select, textarea {
 	.item {
 		margin-bottom: 40px;
 	}
-
 		.item header {
 			background: #fff;
 			margin: 0;
@@ -1990,13 +1989,45 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+
 			.item header h3 {
+				font-size: 1.2em;
+			}
+	
+			.art_article{
+				margin-bottom: 40px;
+			}
+			.art_article header{
+				background: #ecf1f1;
+				margin: 0;
+				padding: 1em 0 1em 0;
+				font-size: 0.8em;
+			}
+			.art_article header h3{
+				font-size: 1em;
+			}
+			.book_article{
+				margin-bottom: 40px;
+			}
+			.book_article header{
+				background: #e8edec;
+				margin: 0;
+				padding: 1em 0 1em 0;
+				font-size: 0.8em;
+			}
+			.book_article header h3{
 				font-size: 1em;
 			}
 
 /* Icons */
 
 	.icon {
+		-ms-user-select: none; 
+		-moz-user-select: -moz-none; 
+		-webkit-user-select: none; 
+		-khtml-user-select: none; 
+		user-select:none;
+
 		text-decoration: none;
 		text-decoration: none;
 	}
@@ -2124,7 +2155,7 @@ input, select, textarea {
 		}
 	
 	.na{
-		padding-top: 6em;
+		padding-top: 2em;
 	}
 
 	#nav ul {
@@ -2775,22 +2806,4 @@ code{
 
 #loginh {
 	padding-top: 100px;
-}
-
-q {
-
-  display: inline;
-
-} 
-
-q:before {
-
-  content: open-quote;
-
-}
-
-q:after {
-
-  content: close-quote;
-
 }
