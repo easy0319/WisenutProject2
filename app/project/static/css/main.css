@@ -1993,7 +1993,18 @@ input, select, textarea {
 			.item header h3 {
 				font-size: 1.2em;
 			}
-	
+			.dance_article{
+				margin-bottom: 40px;
+			}
+			.dance_article header{
+				background: #f5fafa;
+				margin: 0;
+				padding: 1em 0 1em 0;
+				font-size: 0.8em;
+			}
+			.dance_article header h3{
+				font-size: 1em;
+			}
 			.art_article{
 				margin-bottom: 40px;
 			}

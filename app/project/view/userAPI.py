@@ -2,7 +2,7 @@ import hashlib #sha256
 import sqlite3 as sql
 from flask import Blueprint, render_template, request, redirect, url_for, session
 from .dao import userDAO, countDAO
-from .src import art, insta, book
+from .src import dance, art, insta, book
 
 
 ##create table
@@ -28,7 +28,8 @@ userAPI = Blueprint('userAPI', __name__, template_folder='/templates')
 
 @userAPI.route('/', methods=['GET'])
 def base():
-    line = art.art()
+    line = dance.dance()
+    line.extend(art.art())
     line.append(insta.insta())
     line.append(book.book())
     if request.method == 'GET':
@@ -38,10 +39,12 @@ def base():
             cnt = session['cnt']
             return render_template('base.html', cnt = cnt,
                                                 info = email,
-                                                art1 = line[0], #천경자 데이터 시각화 1번
-                                                art2 = line[1], #천경자 데이터 시각화 2번
-                                                insta = line[2],#인스타 데이터 시각화
-                                                book = line[3]
+                                                dance1 = line[0],
+                                                dance2 = line[1],
+                                                art1 = line[2], #천경자 데이터 시각화 1번
+                                                art2 = line[3], #천경자 데이터 시각화 2번
+                                                insta = line[4],#인스타 데이터 시각화
+                                                book = line[5]
                                                 )
         elif 'check_signin' in session:
             check = session['check_signin']
