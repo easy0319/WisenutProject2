@@ -39,48 +39,80 @@
     <br/>
 
     <div class="row">
-      <div class="col-4 col-12-mobile">
-        <article class="item">
+      <div class="col-7 col-12-mobile">
+        <article class="art_article">
           <a class="image fit"><img src="data:image/png;base64, {{ art1 }}" alt="" /></a>
           <header>
-            <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개의<br/>가격과 해당 날짜 데이터 시각화</h3>
+            <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개의<br/>가격과 해당 날짜 데이터 시각화<br/>[ Visual Art 도표 1 ]</h3>
           </header>
           <br/>
-          <header>
-            <img src="/static/img/chunimg.jpg" alt="">
-            <h3>천경자 작가의 대표작 ' 초원 '</h3>
-          </header>
         </article>
         
       </div>
       
-      <div class="col-8 col-12-mobile main_contents">
-        본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-        본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-        본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-        본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-        <div class="row">
-          
-          <div class="col-6 col-12-mobile">
-            <article class="item">
-              본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-              본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-              본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-              본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용본문내용
-            </article>
-          </div>
-          <div class="col-6 col-12-mobile notheader">
-            <article class="item">
-            <a class="image fit"><img src="data:image/png;base64, {{ art2 }}" alt="" /></a>
-            <header>
-              <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개 중<br/>년도 별 가장 높은 거래<br/>가격과 해당 날짜 데이터 시각화</h3>
-            </header>
-            </article>
-          </div>
-        </div>
+      <div class="col-5 col-12-mobile main_contents">
+        [ Visual Art 도표 1 ]
+        이 도표는 천경자 화백님작품의 거래일과 작품가격에 관해
+        시각화한 것입니다.
+        x축은 거래날짜이며 y축은 가격입니다.
+        <a href="https://www.k-artmarket.kr/" class="scrolly" target="_blank">해당 사이트</a>에서 크롤링한 데이터를 바탕으로 이루
+        어져 있습니다.
+        정확히는selenium 패키지를 이용하여
+        <a href="https://www.k-artmarket.kr/member/work/WorkList.do" class="scrolly" target="_blank">해당 사이트</a> 
+        에서 작가명을 검색하여 모든 페이지를 크롤링하였습니다.
+        작품명,거래일,가격 데이터를 데이터프레임으로 저장 했습니다.
+        결측치 제거등 전처리 후 총 886개의 데이터를
+        matplotlib 패키지의 scatter로 시각화 하였습니다.<br/><br/><br/>
+
+
+
+
+        
+
+
+
+
+
+
+        
       </div>
     </div>
-
+    <div class="row">
+    <div class="col-4 col-12-mobile"></div>
+    <div class="col-4 col-12-mobile">
+    <article class="art_article">
+      <header>
+        <img src="/static/img/chunimg.jpg" alt="">
+        <h3>천경자 작가의 대표작 ' 초원 '</h3>
+      </header>
+      </article>
+    </div>
+      <div class="row">
+    </div>
+    <div class="col-4 col-12-mobile"></div>
+          
+        <div class="col-5 col-12-mobile">
+          <article class="item">
+            [ Visual Art 도표 2 ] 이 도표는 천경자 화백님작품의 년도 별 최고가의 거래를 시각화 한 것입니다. x축은 거래날짜이며 y축은 가격입니다.
+            <a href="https://www.k-artmarket.kr/" class="scrolly" target="_blank">해당 사이트</a> 에서 크롤링한 데이터를 바탕으로 이루어져 있습니다.
+            정확히는selenium 패키지를 이용하여
+            <a href="https://www.k-artmarket.kr/member/work/WorkList.do" class="scrolly" target="_blank">해당 사이트</a> 에서 작가명을 검색하여 모든 페이지를 크롤링하였습니다.
+            작품명,거래일,가격 데이터를 데이터프레임으로 저장 했습니다.
+            결측치 제거등 전처리 후 총 886개의 데이터를 꺽은선 그래프로 시각화 하였습니다.
+            하단에 화백님이 돌아가신 때를 X표시 해두었습니다.
+            이 표시를 기점으로 그래프를 보시면 작가의 죽음이 작품가에 영향
+            을 끼치는지를 확인하실 수 있습니다.
+          </article>
+        </div>
+        <div class="col-7 col-12-mobile notheader">
+          <article class="art_article">
+          <a class="image fit"><img src="data:image/png;base64, {{ art2 }}" alt="" /></a>
+          <header>
+            <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개 중<br/>년도 별 가장 높은 거래<br/>가격과 해당 날짜 데이터 시각화<br/>[ Visual Art 도표 2 ]</h3>
+          </header>
+          </article>
+        </div>
+      </div>
 
     <br/><br/><br/>
 
@@ -90,23 +122,27 @@
     <br/><br/><br/>
 
     <div class="row">
-      <div class="col-4 col-12-mobile">
-        <article class="item">
+      <div class="col-8 col-12-mobile">
+        <article class="art_article">
           <a class="image fit"><img src="data:image/png;base64, {{ insta }}" alt="" /></a>
           <header>
-            <h3>'춤' 검색 단어 빈도 수<br/>데이터 시각화</h3>
+            <h3>인스타그램 #전시회 검색 후<br/> 최다 방문 데이터 시각화<br/>[ Visual Art 도표 3 ]</h3>
           </header>
         </article>
       </div>
-      <div class="col-8 col-12-mobile main_contents">
-        <article class="item">
+      <div class="col-4 col-12-mobile ">
+        <article class="art_article">
+
           <p>
-            '춤' 으로 검색한 결과의 뉴스를 총 1500개<br/>
-             수집하여, 뉴스 기사의 문장 그리고 단어들의 정규표현식을 이용해서 한글의 명사만 추출하는 전처리를 거친 후
-             데이터의 단어 빈도 수를 ' 
-             <a href="https://www.wordclouds.com/" class="scrolly" target="_blank">워드클라우드</a> 
-             ' 로
-              시각화한 결과
+            [ Visual Art 도표 3 ] 
+            이 도표는 인스타그램에서 #전시회를 검색 후 총 300개의 데이터를 시각화한 것입니다.<br/><br/>
+            인스타그램 홈페이지는 로그인을 한 후 검색을 할 수 있기 때문에 selenium라이브러리의
+            send_key()를 사용하여 로그인 후 데이터를 수집하는 방식으로 진행했습니다.<br/><br/>
+            인스타그램의 사용자들이 많이 방문한 전시회의 데이터를 얻기위해 게시글들의 위치 정보를 수집했고,
+            결측제 제거, 그룹화등의 전처리를 한 후, 새로운 데이터프레임을 만들었습니다.<br/><br/>
+            새롭게 만들어젠 데이터프레임에서 top10을 가져와 최다 방문 전시회 리스트를
+            파이차트를 통해 시각화 하였습니다.
+          
           </p>
         </article>
         

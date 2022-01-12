@@ -14,54 +14,31 @@
       <br/>
     </header>
 
-    <p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-    egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-    Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-    fusce hendrerit lacus ridiculus.</p>
+    <h1>' 시 ', ' 소설종합 ' 의 베스트 셀러<br/>TOP100의 데이터를 수집하여<br/>' 페이지 수 ' 와 ' 가격 ' 간의 관계 분석
+    </h1>
+
+    <br/>
+    <br/>
 
     <div class="row">
       <div class="col-4 col-12-mobile">
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
+        이 도표는 교보문고 모든 카테고리의 연간 베스트셀러의 495개 데이터를 시각화한 것입니다.<br/><br/>
+        x축은 한 페이지당 가격이고 y축은 책의 권수를 나타냅니다.<br/><br/>
+        <a href="http://www.kyobobook.co.kr/index.laf" class="scrolly" target="_blank">해당 사이트</a> 에서 크롤링한 데이터를 바탕으로 이루어져 있습니다.<br/><br/>
+        연간 베스트셀러의 카테고리를 수집 후 카테고리에 맞는 url에 접속 후, 각 책의 상세페이지에 접속하여
+        책 제목, 가격, 쪽 수의 데이터를 수집했습니다.<br/><br/>
+        스트링의 데이터들을 가공 및 전처리 하였고 계단형 그래프를 통해 시각화 하였습니다.<br/><br/>
+      </div>
+      <div class="col-8 col-12-mobile">
+        <article class="book_article">
+          <a class="image fit"><img src="data:image/png;base64, {{ book }}" alt="" /></a>
           <header>
-            <h3>Ipsum Feugiat</h3>
-          </header>
-        </article>
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
-          <header>
-            <h3>Rhoncus Semper</h3>
+            <h3>연간 베스트셀러 도서들 중 <br/>페이지수와 가격간에 상관관계 분석<br/>[ Visual Book 도표 1 ]</h3>
           </header>
         </article>
       </div>
-      <div class="col-4 col-12-mobile">
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
-          <header>
-            <h3>Magna Nullam</h3>
-          </header>
-        </article>
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
-          <header>
-            <h3>Natoque Vitae</h3>
-          </header>
-        </article>
-      </div>
-      <div class="col-4 col-12-mobile">
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
-          <header>
-            <h3>Dolor Penatibus</h3>
-          </header>
-        </article>
-        <article class="item">
-          <a href="/" class="image fit"><img src="/static/img/duck4.png" alt="" /></a>
-          <header>
-            <h3>Orci Convallis</h3>
-          </header>
-        </article>
-      </div>
+      
+      
     </div>
 
   </div>
