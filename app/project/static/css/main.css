@@ -1745,6 +1745,15 @@ input, select, textarea {
 
 /* Image */
 
+	img.mainimg {
+		height: 50vh;
+		width: 65vw;
+	}
+	img.subimg {
+		height: 40vh;
+		width: 50vw;
+	}
+
 	.image {
 		display: inline-block;
 		border: 0;

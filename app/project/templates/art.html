@@ -1,7 +1,8 @@
 <section id="about" class="three">
   <div class="container">
-
-    <img src="/static/img/artintro.jpeg" alt="">
+    <article class="art_article">
+    <img src="/static/img/artintro.jpeg" alt="" class="mainimg">
+    </article>
     <br/><br/>
     <header>
       <h2>	
@@ -10,7 +11,7 @@
       &emsp;&#8222;</h2>
       <br/>
       <h1>
-        ' 작가의 생애' 와 ' 미술작품 ' <br/>
+        ' 작가의 생애 ' 와 ' 미술작품 ' <br/>
         입찰가격 간의 상관관계 분석<br/>
         <br/>그리고,<br/><br/>
         우리나라에 열린 전시회들 중 <br/>
@@ -24,7 +25,7 @@
     <br/>
     <div class="row">
       <div class="col-4 col-12-mobile">
-        <h2>&#8220;&emsp;<a class="scrolly" target="_blank">최유진</a>&emsp;&#8222;</h2><br/>
+        <!-- <h2>&#8220;&emsp;<a class="scrolly" target="_blank">최유진</a>&emsp;&#8222;</h2><br/> -->
       </div>
       <div class="col-4 col-12-mobile">
         <h2>&#8220;&emsp;<a href="https://namu.wiki/w/%EC%B2%9C%EA%B2%BD%EC%9E%90" class="scrolly" target="_blank">천경자</a>&emsp;&#8222;</h2><br/>
@@ -32,19 +33,17 @@
         <h1>1924 ~ 2015</h1>
       </div>
       <div class="col-4 col-12-mobile">
-        <h2>&#8220;&emsp;<a  class="scrolly" target="_blank">이시현</a>&emsp;&#8222;</h2><br/>
+        <!-- <h2>&#8220;&emsp;<a  class="scrolly" target="_blank">이시현</a>&emsp;&#8222;</h2><br/> -->
       </div>
     </div>
     <br/><br/><br/><br/>
-    <br/>
-    <br/>
 
     <div class="row">
       <div class="col-7 col-12-mobile">
         <article class="art_article">
           <a class="image fit"><img src="data:image/png;base64, {{ art1 }}" alt="" /></a>
           <header>
-            <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개의<br/>가격과 해당 날짜 데이터 시각화<br/>[ Visual Art 도표 1 ]</h3>
+            <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개의<br/>가격과 해당 날짜 데이터 시각화<br/><br/>[ Visual Art 도표 1 ]</h3>
           </header>
           <br/>
         </article>
@@ -56,35 +55,31 @@
         이 도표는 천경자 화백님작품의 거래일과 작품가격에 관해
         시각화한 것입니다.
         x축은 거래날짜이며 y축은 가격입니다.<br/><br/>
-        <a href="https://www.k-artmarket.kr/" class="scrolly" target="_blank">해당 사이트</a>에서 크롤링한 데이터를 바탕으로 이루
-        어져 있습니다.
-        정확히는selenium 패키지를 이용하여
+        <a href="https://www.k-artmarket.kr/" class="scrolly" target="_blank">해당 사이트</a>에서 크롤링한 데이터를 바탕으로 이루어져 있습니다.
+        정확히는 ' selenium ' 패키지를 이용하여
         <a href="https://www.k-artmarket.kr/member/work/WorkList.do" class="scrolly" target="_blank">해당 사이트</a> 
         에서 작가명을 검색하여 모든 페이지를 크롤링하였습니다.<br/><br/>
-        작품명,거래일,가격 데이터를 데이터프레임으로 저장 했습니다.
+        작품명, 거래일, 가격 데이터를 데이터프레임으로 저장 했습니다.
         결측치 제거등 전처리 후 총 886개의 데이터를
         matplotlib 패키지의 scatter로 시각화 하였습니다.<br/><br/><br/>
       </div>
     </div>
 
+    <br/>
 
-    <div class="row">
-      <div class="col-4 col-12-mobile"></div>
-      <div class="col-4 col-12-mobile">
-       <article class="art_article">
-        <header>
-          <img src="/static/img/chunimg.jpg" alt="">
-          <h3>천경자 작가의 대표작 ' 초원 '</h3>
-        </header>
+        <article class="art_article">
+          <header>
+            <img src="/static/img/chunimg.jpg" alt="" class="subimg">
+            <h3>천경자 작가의 대표작 ' 초원 Ⅱ '</h3>
+          </header>
         </article>
-      </div>
-      <div class="col-4 col-12-mobile"></div>
-      
+
+    <br/><br/>
 
     <div class="row">
           <div class="col-5 col-12-mobile">
             <article class="item">
-              [ Visual Art 도표 2 ] 이 도표는 천경자 화백님작품의 년도 별 최고가의 거래를 시각화 한 것입니다. x축은 거래날짜이며 y축은 가격입니다.
+              [ Visual Art 도표 2 ] 이 도표는 천경자 화백님 작품의 년도 별 최고가의 거래를 시각화 한 것입니다. x축은 거래날짜이며 y축은 가격입니다.
               <a href="https://www.k-artmarket.kr/" class="scrolly" target="_blank">해당 사이트</a> 에서 크롤링한 데이터를 바탕으로 이루어져 있습니다.
               정확히는selenium 패키지를 이용하여
               <a href="https://www.k-artmarket.kr/member/work/WorkList.do" class="scrolly" target="_blank">해당 사이트</a> 에서 작가명을 검색하여 모든 페이지를 크롤링하였습니다.
@@ -99,13 +94,12 @@
             <article class="art_article">
             <a class="image fit"><img src="data:image/png;base64, {{ art2 }}" alt="" /></a>
             <header>
-              <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개 중<br/>년도 별 가장 높은 거래<br/>가격과 해당 날짜 데이터 시각화<br/>[ Visual Art 도표 2 ]</h3>
+              <h3>천경자 작가의 총 작품<br/>945개 중 경매된 886개 중<br/>년도 별 가장 높은 거래<br/>가격 데이터 시각화<br/><br/>[ Visual Art 도표 2 ]</h3>
             </header>
           </article>
           </div>
       </div>
 
-    </div>
 
     <br/><br/><br/>
 
@@ -118,7 +112,7 @@
         <article class="art_article">
           <a class="image fit"><img src="data:image/png;base64, {{ insta }}" alt="" /></a>
           <header>
-            <h3>인스타그램 #전시회 검색 후<br/> 최다 방문 데이터 시각화<br/>[ Visual Art 도표 3 ]</h3>
+            <h3>인스타그램 ' #전시회 ' 검색 후<br/> 최다 방문 데이터 시각화<br/><br/>[ Visual Art 도표 3 ]</h3>
           </header>
         </article>
       </div>
