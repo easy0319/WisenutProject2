@@ -1,7 +1,7 @@
 <section id="portfolio" class="two">
   <div class="container">
 
-    <img src="/static/img/danceintro.jpeg" alt="">
+    <img src="/static/img/danceintro.jpeg" alt="" class="mainimg">
     <br/><br/>
     <header>
       <h2>
@@ -27,16 +27,15 @@
         <article class="dance_article">
           <a class="image fit"><img src="data:image/png;base64, {{ dance1 }}" alt="" /></a>
           <header>
-            <h3>'춤' 검색 단어 빈도 수<br/>데이터 시각화</h3>
+            <h3>' 춤 ' 검색 단어 빈도 수<br/>데이터 시각화<br/><br/>[ Visual Dance 도표 1 ]</h3>
           </header>
         </article>
         <p>
-          '춤' 으로 검색한 결과의 뉴스를 총 1500개<br/>
+          [ Visual Dance 도표 1 ] 그래프는 ' 춤 ' 으로 검색한 결과의 뉴스를 총 1500개<br/>
            수집하여, 뉴스 기사의 문장 그리고 단어들의 정규표현식을 이용해서 한글의 명사만 추출하는 전처리를 거친 후
            데이터의 단어 빈도 수를 ' 
-           <a href="https://www.wordclouds.com/" class="scrolly" target="_blank">워드클라우드</a> 
-           ' 로
-            시각화한 결과
+           <a class="scrolly" target="_blank">워드클라우드</a> 
+           ' 로 시각화한 결과
         </p>
       </div>
       <div class="col-2 col-12-mobile"></div>
@@ -46,15 +45,19 @@
 
     <!-- dance 2 article -->
     <div class="row">
-      <div class="col-9 col-12-mobile notheader">
+      <div class="col-8 col-12-mobile notheader">
         <article class="dance_article">
-        <a class="image fit"><img src="data:image/png;base64, {{ dance2 }}" alt="" /></a>
+          <a class="image fit"><img src="data:image/png;base64, {{ dance2 }}" alt="" /></a>
         <header>
-          <h3></h3>
+          <h3>' 춤 ', ' 댄스 ' 검색 결과 기사 수 및<br/>해당 키워드 빈도 수 데이터 시각화<br/><br/>[ Visual Dance 도표 2 ]</h3>
         </header>
       </article>
       </div>
-      <div class="col-3 col-12-mobile">awioejfiowejfowejifwoejf</div>
+      <div class="col-4 col-12-mobile">[ Visual Dance 도표 2 ] 그래프는 작년 1년 기준 춤 또는 댄스를 네이버 뉴스에 검색한 결과 데이터를 분석한 것입니다.<br/><br/>
+        춤과 댄스라는 키워드 검색 시 보도자료 및 지면기사 기준으로 관련 기사의 발행수를 월별로 카운트하여 1년간 전체적인 
+        그래프 추세가 상승함을 알 수 있습니다.<br/><br/>
+        또한 기사 중 춤과 댄스 키워드를 기준으로 해당 키워드가 언급된 빈도를 월별로 분석하였고 이를 통해 관련 방송 프로그램 방영일인 8월, 10월 
+        기점으로 급격하게 언급된 빈도수가 상승하는 현상을 보실 수 있습니다.</div>
     </div>
   </div>
 </section>
